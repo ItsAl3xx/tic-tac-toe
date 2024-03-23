@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <!-- Bootstrap CSS included from the node_modules directory -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Custom CSS for styling our game -->
+    <style>
+        /* Overall background for dark mode */
+        body {
+            background-color: #343a40;
+            color: white;
+        }
+        /* Styling the Tic-Tac-Toe board with a grid layout */
+        .tic-tac-toe-board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 10px;
+        }
+        /* Individual cells in the Tic-Tac-Toe board */
+        .tic-tac-toe-cell {
+            width: 100px;
+            height: 100px;
+            background-color: #6c757d;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Game container with a heading and the game board -->
+    <div class="container mt-3">
+        <!-- Heading to indicate whose turn it is -->
+        <h1 id="turnIndicator">X's Turn</h1>
+        <!-- The Tic-Tac-Toe board itself -->
+        <div id="ticTacToeBoard" class="tic-tac-toe-board">
+            <!-- Cells of the Tic-Tac-Toe board -->
+            <div class="tic-tac-toe-cell"></div>
+            <div class="tic-tac-toe-cell"></div>
+            <div class="tic-tac-toe-cell"></div>
+            <div class="tic-tac-toe-cell"></div>
+            <div class="tic-tac-toe-cell"></div>
+            <div class="tic-tac-toe-cell"></div>
+            <div class="tic-tac-toe-cell"></div>
+            <div class="tic-tac-toe-cell"></div>
+            <div class="tic-tac-toe-cell"></div>
+        </div>
+        <!-- Button to restart the game -->
+        <button id="resetButton" class="btn btn-primary mt-3">Restart Game</button>
+    </div>
+
+    <!-- Bootstrap's JavaScript bundle included from the node_modules directory -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Link to our external JavaScript file that handles the game logic -->
+    <script src="app.js"></script>
+</body>
+</html>
